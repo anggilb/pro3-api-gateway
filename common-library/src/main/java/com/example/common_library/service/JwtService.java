@@ -1,8 +1,7 @@
-package com.example.auth_service_api.service;
+package com.example.common_library.service;
 
-import com.example.auth_service_api.commons.dtos.TokenResponse;
+import com.example.common_library.commons.dtos.TokenResponse;
 import io.jsonwebtoken.Claims;
-import jakarta.servlet.http.HttpServletRequest;
 
 public interface JwtService {
     TokenResponse generateToken(Long userId);

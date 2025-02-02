@@ -1,7 +1,7 @@
 package com.example.auth_service_api.service.impl;
 
-import com.example.auth_service_api.repositories.UserRepository;
-import com.example.auth_service_api.service.JwtService;
+import com.example.common_library.repositories.UserRepository;
+import com.example.common_library.service.JwtService;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;

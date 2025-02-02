@@ -1,11 +1,10 @@
-package com.example.auth_service_api.service.impl;
+package com.example.common_library.service.impl;
 
-import com.example.auth_service_api.commons.dtos.TokenResponse;
-import com.example.auth_service_api.service.JwtService;
+import com.example.common_library.commons.dtos.TokenResponse;
+import com.example.common_library.service.JwtService;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
-import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
@@ -30,9 +29,7 @@ public class JwtServiceImpl implements JwtService {
                 .signWith(SignatureAlgorithm.HS512, this.secretToken)
                 .compact();
 
-        return TokenResponse.builder()
-                .accessToken(token)
-                .build();
+        return TokenResponse.builder().accessToken(token).build();
     }
 
     @Override

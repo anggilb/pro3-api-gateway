@@ -1,4 +1,4 @@
-package com.example.auth_service_api.commons.entities;
+package com.example.common_library.commons.entities;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -9,26 +9,33 @@ import org.springframework.security.core.userdetails.UserDetails;
 import java.util.Collection;
 import java.util.List;
 
+@Builder
 @Entity
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-@Builder
 @Table(name = "users")
 public class UserModel implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long userId;
+
+    @Column(unique = true, nullable = false)
     private String email;
+
+    @Column(nullable = false)
     private String password;
+
     private String name;
+
+    @Column(nullable = false)
     private String role;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return List.of(new SimpleGrantedAuthority(role));
+        return role != null ? List.of(new SimpleGrantedAuthority(role)) : List.of();
     }
 
     @Override
@@ -37,22 +44,7 @@ public class UserModel implements UserDetails {
     }
 
     @Override
-    public boolean isAccountNonExpired() {
-        return true;
-    }
-
-    @Override
-    public boolean isAccountNonLocked() {
-        return true;
-    }
-
-    @Override
-    public boolean isCredentialsNonExpired() {
-        return true;
-    }
-
-    @Override
-    public boolean isEnabled() {
-        return true;
+    public String getPassword() {
+        return password;
     }
 }

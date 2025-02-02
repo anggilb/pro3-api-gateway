@@ -1,9 +1,9 @@
 package com.example.users_service_api.controller.impl;
 
-import com.example.auth_service_api.commons.dtos.UserRequest;
-import com.example.auth_service_api.controller.UserApi;
-import com.example.auth_service_api.service.impl.UserDetailsImpl;
-import com.example.auth_service_api.service.impl.UserServiceImpl;
+import com.example.common_library.commons.dtos.UserRequest;
+import com.example.users_service_api.controller.UserApi;
+import com.example.users_service_api.service.impl.UserDetailsImpl;
+import com.example.users_service_api.service.impl.UserServiceImpl;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.RestController;

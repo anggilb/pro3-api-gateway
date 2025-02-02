@@ -13,6 +13,7 @@
         <module>auth-service-api</module>
         <module>games-service-api</module>
         <module>users-service-api</module>
+        <module>common-library</module>
     </modules>
 
     <properties>

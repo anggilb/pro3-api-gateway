@@ -1,4 +1,4 @@
-package com.example.auth_service_api.commons.dtos;
+package com.example.common_library.commons.dtos;
 
 import jakarta.validation.constraints.NotNull;
 import lombok.*;

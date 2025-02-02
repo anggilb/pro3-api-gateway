@@ -1,9 +1,9 @@
 package com.example.auth_service_api.controller;
 
-import com.example.auth_service_api.commons.constants.ApiPathConstants;
-import com.example.auth_service_api.commons.dtos.LoginRequest;
-import com.example.auth_service_api.commons.dtos.TokenResponse;
-import com.example.auth_service_api.commons.dtos.UserRequest;
+import com.example.common_library.commons.constants.ApiPathConstants;
+import com.example.common_library.commons.dtos.UserRequest;
+import com.example.common_library.commons.dtos.TokenResponse;
+import com.example.common_library.commons.dtos.LoginRequest;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
