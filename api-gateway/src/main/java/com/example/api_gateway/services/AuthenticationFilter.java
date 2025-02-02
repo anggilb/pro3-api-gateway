@@ -16,6 +16,7 @@ public class AuthenticationFilter extends AbstractGatewayFilterFactory<Authentic
     private final JwtUtils jwtUtils;
 
     public AuthenticationFilter(RouterValidator validator, JwtUtils jwtUtils) {
+        super(Config.class);
         this.validator = validator;
         this.jwtUtils = jwtUtils;
     }
@@ -43,6 +44,8 @@ public class AuthenticationFilter extends AbstractGatewayFilterFactory<Authentic
                 if (jwtUtils.isExpired(authHeader)) {
                     return onError(exchange, HttpStatus.UNAUTHORIZED);
                 }
+
+                String userId = jwtUtils.extractUserId(authHeader).toString();
 
                 serverHttpRequest = exchange.getRequest()
                         .mutate()

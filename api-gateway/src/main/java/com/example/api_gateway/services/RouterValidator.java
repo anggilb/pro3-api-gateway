@@ -14,7 +14,7 @@ public class RouterValidator {
     );
 
     private HttpRequest serverHttpRequest;
-    public Predicate<ServerHttpRequest> isSecured = serverHttpSequest -> openEndpoints.stream().noneMatch(
+    public Predicate<ServerHttpRequest> isSecured = serverHttpRequest -> openEndpoints.stream().noneMatch(
             uri -> serverHttpRequest.getURI().getPath().contains(uri)
     );
 }
