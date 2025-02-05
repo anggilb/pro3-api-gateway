@@ -1,8 +1,8 @@
 package com.example.users_service_api.service.impl;
 
-import com.example.common_library.commons.dtos.UserRequest;
-import com.example.common_library.commons.entities.UserModel;
-import com.example.common_library.repositories.UserRepository;
+import com.example.auth_service_api.commons.dtos.UserRequest;
+import com.example.auth_service_api.commons.entities.UserModel;
+import com.example.auth_service_api.repositories.UserRepository;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -15,7 +15,7 @@ public class UserServiceImpl {
 
     public void putUser(Long userId, UserRequest userRequest) {
         userRepository.findById(userId)
-                .map(existingGame -> updatedFieldsUser(existingGame, userRequest))
+                .map(existingUser -> updatedFieldsUser(existingUser, userRequest))
                 .map(userRepository::save)
                 .orElseThrow(() -> new RuntimeException("Error couldn't edit user by id"));
     }

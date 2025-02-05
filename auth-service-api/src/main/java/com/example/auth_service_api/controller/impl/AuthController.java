@@ -1,8 +1,8 @@
 package com.example.auth_service_api.controller.impl;
 
-import com.example.common_library.commons.dtos.LoginRequest;
-import com.example.common_library.commons.dtos.TokenResponse;
-import com.example.common_library.commons.dtos.UserRequest;
+import com.example.auth_service_api.commons.dtos.LoginRequest;
+import com.example.auth_service_api.commons.dtos.TokenResponse;
+import com.example.auth_service_api.commons.dtos.UserRequest;
 import com.example.auth_service_api.controller.AuthApi;
 import com.example.auth_service_api.service.AuthService;
 import org.springframework.http.ResponseEntity;

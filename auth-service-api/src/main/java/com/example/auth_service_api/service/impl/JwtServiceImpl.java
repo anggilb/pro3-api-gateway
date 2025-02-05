@@ -1,7 +1,7 @@
-package com.example.common_library.service.impl;
+package com.example.auth_service_api.service.impl;
 
-import com.example.common_library.commons.dtos.TokenResponse;
-import com.example.common_library.service.JwtService;
+import com.example.auth_service_api.commons.dtos.TokenResponse;
+import com.example.auth_service_api.service.JwtService;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -37,7 +37,7 @@ public class JwtServiceImpl implements JwtService {
         return Jwts.parserBuilder()
                 .setSigningKey(this.secretToken)
                 .build()
-                .parseClaimsJws(token)
+                .parseClaimsJwt(token)
                 .getBody();
     }
 

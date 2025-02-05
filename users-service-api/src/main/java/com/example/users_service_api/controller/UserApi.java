@@ -1,7 +1,7 @@
 package com.example.users_service_api.controller;
 
-import com.example.common_library.commons.constants.ApiPathConstants;
-import com.example.common_library.commons.dtos.UserRequest;
+import com.example.users_service_api.commons.constants.ApiPathConstants;
+import com.example.auth_service_api.commons.dtos.UserRequest;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.userdetails.UserDetails;

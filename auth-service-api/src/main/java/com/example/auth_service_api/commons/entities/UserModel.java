@@ -1,4 +1,4 @@
-package com.example.common_library.commons.entities;
+package com.example.auth_service_api.commons.entities;
 
 import jakarta.persistence.*;
 import lombok.*;
