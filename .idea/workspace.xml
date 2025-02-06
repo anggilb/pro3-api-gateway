@@ -5,37 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2be4a204-6be0-44bf-8ed0-de0b97e3c389" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/example/api_gateway/services/AuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/example/api_gateway/services/AuthenticationFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/example/api_gateway/services/JwtUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/example/api_gateway/services/JwtUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service-api/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service-api/src/main/java/com/example/auth_service_api/AuthServiceApiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service-api/src/main/java/com/example/auth_service_api/AuthServiceApiApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service-api/src/main/java/com/example/auth_service_api/config/JwtAuthFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service-api/src/main/java/com/example/auth_service_api/config/JwtAuthFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service-api/src/main/java/com/example/auth_service_api/controller/AuthApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service-api/src/main/java/com/example/auth_service_api/controller/AuthApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service-api/src/main/java/com/example/auth_service_api/controller/impl/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service-api/src/main/java/com/example/auth_service_api/controller/impl/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service-api/src/main/java/com/example/auth_service_api/service/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service-api/src/main/java/com/example/auth_service_api/service/AuthService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service-api/src/main/java/com/example/auth_service_api/service/impl/AuthServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service-api/src/main/java/com/example/auth_service_api/service/impl/AuthServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service-api/src/main/java/com/example/auth_service_api/service/impl/UserDetailsImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service-api/src/main/java/com/example/auth_service_api/service/impl/UserDetailsImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service-api/src/main/java/com/example/auth_service_api/service/impl/UserServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-library/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-library/src/main/java/com/example/common_library/commons/constants/ApiPathConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service-api/src/main/java/com/example/auth_service_api/commons/constants/ApiPathConstants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-library/src/main/java/com/example/common_library/commons/dtos/LoginRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service-api/src/main/java/com/example/auth_service_api/commons/dtos/LoginRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-library/src/main/java/com/example/common_library/commons/dtos/TokenResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service-api/src/main/java/com/example/auth_service_api/commons/dtos/TokenResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-library/src/main/java/com/example/common_library/commons/dtos/UserRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service-api/src/main/java/com/example/auth_service_api/commons/dtos/UserRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-library/src/main/java/com/example/common_library/commons/entities/UserModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service-api/src/main/java/com/example/auth_service_api/commons/entities/UserModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-library/src/main/java/com/example/common_library/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service-api/src/main/java/com/example/auth_service_api/repositories/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-library/src/main/java/com/example/common_library/service/JwtService.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service-api/src/main/java/com/example/auth_service_api/service/JwtService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-library/src/main/java/com/example/common_library/service/impl/JwtServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service-api/src/main/java/com/example/auth_service_api/service/impl/JwtServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/common-library/src/main/resources/application.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/games-service-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/games-service-api/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/games-service-api/src/main/java/com/example/games_service_api/controller/GameApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/games-service-api/src/main/java/com/example/games_service_api/controller/GameApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-service-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/users-service-api/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-service-api/src/main/java/com/example/users_service_api/UsersServiceApiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/users-service-api/src/main/java/com/example/users_service_api/UsersServiceApiApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-service-api/src/main/java/com/example/users_service_api/controller/UserApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/users-service-api/src/main/java/com/example/users_service_api/controller/UserApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-service-api/src/main/java/com/example/users_service_api/controller/impl/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/users-service-api/src/main/java/com/example/users_service_api/controller/impl/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-service-api/src/main/java/com/example/users_service_api/service/impl/UserDetailsImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/users-service-api/src/main/java/com/example/users_service_api/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/users-service-api/src/main/java/com/example/users_service_api/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service-api/src/main/java/com/example/auth_service_api/service/impl/JwtServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service-api/src/main/java/com/example/auth_service_api/service/impl/JwtServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,25 +34,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.ApiGatewayApplication.executor": "Run",
-    "Application.AuthServiceApiApplication.executor": "Run",
-    "Application.GamesServiceApiApplication.executor": "Run",
-    "Application.UsersServiceApiApplication.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.annotationProcessors",
-    "settings.editor.splitter.proportion": "0.20064987"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.ApiGatewayApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.AuthServiceApiApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.GamesServiceApiApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.UsersServiceApiApplication.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.annotationProcessors&quot;,
+    &quot;settings.editor.splitter.proportion&quot;: &quot;0.20064987&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.example.games_service_api.commons.constants" />

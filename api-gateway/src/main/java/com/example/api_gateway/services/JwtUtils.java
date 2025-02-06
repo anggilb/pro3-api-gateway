@@ -2,19 +2,24 @@ package com.example.api_gateway.services;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
 
 @Service
 public class JwtUtils {
-    private final String secretKey = "kfndslknfsdZanfsdafoisafewonvvsduovwencinsdqcnweucnwnucwencwnsocnfdsocnsdioancsadncouasdncasdncsandcnsdipcmisadmcoasd";
+    private final String secretKey;
+
+    public JwtUtils(@Value("${jwt.secret}") String secretKey) {
+        this.secretKey = secretKey;
+    }
 
     public Claims getClaims(String token) {
         return Jwts.parserBuilder()
-                .setSigningKey(secretKey)
+                .setSigningKey(this.secretKey)
                 .build()
-                .parseClaimsJwt(token)
+                .parseClaimsJws(token)
                 .getBody();
     }
 

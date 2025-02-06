@@ -37,7 +37,7 @@ public class JwtServiceImpl implements JwtService {
         return Jwts.parserBuilder()
                 .setSigningKey(this.secretToken)
                 .build()
-                .parseClaimsJwt(token)
+                .parseClaimsJws(token)
                 .getBody();
     }
 
