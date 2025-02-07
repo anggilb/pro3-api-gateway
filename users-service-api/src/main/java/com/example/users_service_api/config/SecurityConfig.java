@@ -1,6 +1,5 @@
-package com.example.auth_service_api.config;
+package com.example.users_service_api.config;
 
-import com.example.users_service_api.config.JwtAuthFilter;
 import com.example.users_service_api.repositories.UserRepository;
 import com.example.users_service_api.service.impl.UserDetailsImpl;
 import org.springframework.context.annotation.Bean;

@@ -2,7 +2,7 @@ package com.example.auth_service_api.controller;
 
 import com.example.auth_service_api.commons.constants.ApiPathConstants;
 import com.example.users_service_api.commons.dtos.UserRequest;
-import com.example.users_service_api.commons.dtos.TokenResponse;
+import com.example.auth_service_api.commons.dtos.TokenResponse;
 import com.example.auth_service_api.commons.dtos.LoginRequest;
 import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;

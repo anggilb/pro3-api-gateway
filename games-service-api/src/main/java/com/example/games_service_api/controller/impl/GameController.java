@@ -3,6 +3,7 @@ package com.example.games_service_api.controller.impl;
 import com.example.games_service_api.commons.entities.GameModel;
 import com.example.games_service_api.controller.GameApi;
 import com.example.games_service_api.service.GameService;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -15,23 +16,42 @@ public class GameController implements GameApi {
     }
 
     @Override
-    public ResponseEntity<GameModel> createGame(GameModel gameRequest) {
+    public ResponseEntity<GameModel> createGame(Long userId, GameModel gameRequest) {
+        gameRequest.setUserId(userId);
         return ResponseEntity.ok(gameService.createGame(gameRequest));
     }
 
     @Override
-    public ResponseEntity<GameModel> getGame(Long gameId) {
-        return ResponseEntity.ok(gameService.getGame(gameId));
+    public ResponseEntity<GameModel> getGame(Long userId, Long gameId) {
+        GameModel game = gameService.getGame(gameId);
+
+        if (game.getUserId() != userId) {
+            return ResponseEntity.status(HttpStatus.FORBIDDEN).build();
+        }
+
+        return ResponseEntity.ok(game);
     }
 
     @Override
-    public ResponseEntity<Void> putGame(Long gameId, GameModel gameRequest) {
+    public ResponseEntity<Void> putGame(Long userId, Long gameId, GameModel gameRequest) {
+        GameModel game = gameService.getGame(gameId);
+
+        if (game.getUserId() != userId) {
+            return ResponseEntity.status(HttpStatus.FORBIDDEN).build();
+        }
+
         gameService.putGame(gameId, gameRequest);
         return ResponseEntity.noContent().build();
     }
 
     @Override
-    public ResponseEntity<Void> deleteGame(Long gameId) {
+    public ResponseEntity<Void> deleteGame(Long userId, Long gameId) {
+        GameModel game = gameService.getGame(gameId);
+
+        if (game.getUserId() != userId) {
+            return ResponseEntity.status(HttpStatus.FORBIDDEN).build();
+        }
+
         gameService.deleteGame(gameId);
         return ResponseEntity.noContent().build();
     }

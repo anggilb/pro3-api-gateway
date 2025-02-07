@@ -1,4 +1,4 @@
-package com.example.games_service_api.repository;
+package com.example.games_service_api.repositories;
 
 import com.example.games_service_api.commons.entities.GameModel;
 import org.springframework.data.jpa.repository.JpaRepository;

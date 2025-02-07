@@ -1,8 +1,7 @@
-package com.example.users_service_api.service.impl;
+package com.example.auth_service_api.service.impl;
 
-import com.example.users_service_api.commons.dtos.TokenResponse;
-import com.example.users_service_api.service.JwtService;
-import io.jsonwebtoken.Claims;
+import com.example.auth_service_api.commons.dtos.TokenResponse;
+import com.example.auth_service_api.service.JwtService;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import org.springframework.beans.factory.annotation.Value;
@@ -30,32 +29,5 @@ public class JwtServiceImpl implements JwtService {
                 .compact();
 
         return TokenResponse.builder().accessToken(token).build();
-    }
-
-    @Override
-    public Claims getClaims(String token) {
-        return Jwts.parserBuilder()
-                .setSigningKey(this.secretToken)
-                .build()
-                .parseClaimsJws(token)
-                .getBody();
-    }
-
-    @Override
-    public boolean isExpired(String token) {
-        try {
-            return getClaims(token).getExpiration().before(new Date());
-        } catch (Exception e) {
-            return false;
-        }
-    }
-
-    @Override
-    public Long extractedUserId(String token) {
-        try {
-            return Long.valueOf(getClaims(token).getSubject());
-        } catch (Exception e) {
-            return null;
-        }
     }
 }

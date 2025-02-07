@@ -1,7 +1,7 @@
 package com.example.games_service_api.service.impl;
 
 import com.example.games_service_api.commons.entities.GameModel;
-import com.example.games_service_api.repository.GameRepository;
+import com.example.games_service_api.repositories.GameRepository;
 import com.example.games_service_api.service.GameService;
 import org.springframework.stereotype.Service;
 
@@ -53,6 +53,7 @@ public class GameServiceImpl implements GameService {
     private GameModel mapToEntity(GameModel gameRequest) {
         return GameModel.builder()
                 .name(gameRequest.getName())
+                .userId(gameRequest.getUserId())
                 .build();
     }
 }

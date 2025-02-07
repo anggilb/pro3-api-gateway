@@ -9,22 +9,26 @@ import org.springframework.web.bind.annotation.*;
 public interface GameApi {
     @PostMapping(value = "/create")
     ResponseEntity<GameModel> createGame(
+            @RequestAttribute("userIdRequest") Long userId,
             @RequestBody GameModel gameRequest
     );
 
     @GetMapping(value = "/{gameId}")
     ResponseEntity<GameModel> getGame(
+            @RequestAttribute("userIdRequest") Long userId,
             @PathVariable Long gameId
     );
 
     @PutMapping(value = "/{gameId}")
     ResponseEntity<Void> putGame(
+            @RequestAttribute("userIdRequest") Long userId,
             @PathVariable Long gameId,
             @RequestBody GameModel gameRequest
     );
 
     @DeleteMapping(value = "/{gameId}")
     ResponseEntity<Void> deleteGame(
+            @RequestAttribute("userIdRequest") Long userId,
             @PathVariable Long gameId
     );
 }

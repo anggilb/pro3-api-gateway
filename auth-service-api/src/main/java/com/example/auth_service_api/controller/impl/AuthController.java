@@ -1,7 +1,7 @@
 package com.example.auth_service_api.controller.impl;
 
 import com.example.auth_service_api.commons.dtos.LoginRequest;
-import com.example.users_service_api.commons.dtos.TokenResponse;
+import com.example.auth_service_api.commons.dtos.TokenResponse;
 import com.example.users_service_api.commons.dtos.UserRequest;
 import com.example.auth_service_api.controller.AuthApi;
 import com.example.auth_service_api.service.AuthService;

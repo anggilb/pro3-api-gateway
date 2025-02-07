@@ -4,16 +4,12 @@ import com.example.users_service_api.commons.dtos.UserRequest;
 import com.example.users_service_api.controller.UserApi;
 import com.example.users_service_api.service.impl.UserDetailsImpl;
 import com.example.users_service_api.service.impl.UserServiceImpl;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class UserController implements UserApi {
-    private static final Logger logger = LoggerFactory.getLogger(UserController.class);
-
     private final UserDetailsImpl userDetails;
     private final UserServiceImpl userServiceImpl;
 
@@ -24,8 +20,6 @@ public class UserController implements UserApi {
 
     @Override
     public ResponseEntity<UserDetails> getUser(Long userId) {
-        logger.info("userId");
-        logger.info(userId.toString());
         return ResponseEntity.ok(userDetails.loadUserById(userId));
     }
 

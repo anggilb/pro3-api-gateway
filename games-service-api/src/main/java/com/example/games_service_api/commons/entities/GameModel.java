@@ -16,4 +16,5 @@ public class GameModel {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long gameId;
     private String name;
+    private long userId;
 }

@@ -49,7 +49,7 @@ public class AuthenticationFilter extends AbstractGatewayFilterFactory<Authentic
 
                 serverHttpRequest = exchange.getRequest()
                         .mutate()
-                        .header("userIdRequest", userId)
+                        .header("X-User-Id", userId)
                         .build();
             }
 
