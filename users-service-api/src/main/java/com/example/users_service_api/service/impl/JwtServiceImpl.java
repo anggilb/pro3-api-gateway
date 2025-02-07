@@ -1,7 +1,7 @@
-package com.example.auth_service_api.service.impl;
+package com.example.users_service_api.service.impl;
 
-import com.example.auth_service_api.commons.dtos.TokenResponse;
-import com.example.auth_service_api.service.JwtService;
+import com.example.users_service_api.commons.dtos.TokenResponse;
+import com.example.users_service_api.service.JwtService;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;

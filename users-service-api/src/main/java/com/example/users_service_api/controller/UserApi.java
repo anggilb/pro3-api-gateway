@@ -1,8 +1,7 @@
 package com.example.users_service_api.controller;
 
 import com.example.users_service_api.commons.constants.ApiPathConstants;
-import com.example.auth_service_api.commons.dtos.UserRequest;
-import io.swagger.v3.oas.annotations.security.SecurityRequirement;
+import com.example.users_service_api.commons.dtos.UserRequest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
@@ -11,17 +10,17 @@ import org.springframework.web.bind.annotation.*;
 public interface UserApi {
     @GetMapping(value = "/get")
     ResponseEntity<UserDetails> getUser(
-            @RequestAttribute("X-User-Id") Long userId
+            @RequestAttribute("userIdRequest") Long userId
     );
 
     @PutMapping(value = "/put")
     ResponseEntity<Void> putUser(
-            @RequestAttribute("X-User-Id") Long userId,
+            @RequestAttribute("userIdRequest") Long userId,
             @RequestBody UserRequest userRequest
     );
 
     @DeleteMapping(value = "/delete")
     ResponseEntity<Void> deleteUser(
-            @RequestAttribute("X-User-Id") Long userId
+            @RequestAttribute("userIdRequest") Long userId
     );
 }

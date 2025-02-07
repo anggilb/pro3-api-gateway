@@ -1,7 +1,6 @@
-package com.example.auth_service_api.service.impl;
+package com.example.users_service_api.service.impl;
 
-import com.example.auth_service_api.repositories.UserRepository;
-import com.example.auth_service_api.service.JwtService;
+import com.example.users_service_api.repositories.UserRepository;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -12,11 +11,9 @@ import java.util.Optional;
 @Service
 public class UserDetailsImpl implements UserDetailsService {
     private final UserRepository userRepository;
-    private final JwtService jwtService;
 
-    public UserDetailsImpl(UserRepository userRepository, JwtService jwtService) {
+    public UserDetailsImpl(UserRepository userRepository) {
         this.userRepository = userRepository;
-        this.jwtService = jwtService;
     }
 
     @Override

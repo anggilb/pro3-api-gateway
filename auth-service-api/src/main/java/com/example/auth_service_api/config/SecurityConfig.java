@@ -1,6 +1,9 @@
 package com.example.auth_service_api.config;
 
+import com.example.users_service_api.repositories.UserRepository;
+import com.example.users_service_api.service.impl.UserDetailsImpl;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.AuthenticationProvider;
@@ -19,6 +22,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 
 @Configuration
 @EnableWebSecurity
+@ComponentScan(basePackages = {"com.example.auth_service_api", "com.example.users_service_api"})
 public class SecurityConfig {
     private final UserDetailsService userDetailsService;
     private final JwtAuthFilter jwtAuthFilter;
@@ -26,6 +30,11 @@ public class SecurityConfig {
     public SecurityConfig(UserDetailsService userDetailsService, JwtAuthFilter jwtAuthFilter) {
        this.userDetailsService = userDetailsService;
        this.jwtAuthFilter = jwtAuthFilter;
+    }
+
+    @Bean
+    public UserDetailsService userDetailsService(UserRepository userRepository) {
+        return new UserDetailsImpl(userRepository);
     }
 
     @Bean

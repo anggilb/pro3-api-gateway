@@ -1,8 +1,8 @@
 package com.example.auth_service_api.config;
 
-import com.example.auth_service_api.service.JwtService;
-import com.example.auth_service_api.commons.entities.UserModel;
-import com.example.auth_service_api.repositories.UserRepository;
+import com.example.users_service_api.service.JwtService;
+import com.example.users_service_api.commons.entities.UserModel;
+import com.example.users_service_api.repositories.UserRepository;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -34,7 +34,7 @@ public class JwtAuthFilter extends OncePerRequestFilter {
                 .map(jwtService::extractedUserId)
                 .flatMap(userid -> userRepository.findById(Long.valueOf(userid)))
                 .ifPresent(userDetails -> {
-                    request.setAttribute("X-User-Id", userDetails.getUserId());
+                    request.setAttribute("userIdRequest", userDetails.getUserId());
                     processAuthentication(request, userDetails);
                 });
 

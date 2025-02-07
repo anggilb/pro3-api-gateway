@@ -1,6 +1,6 @@
-package com.example.auth_service_api.repositories;
+package com.example.users_service_api.repositories;
 
-import com.example.auth_service_api.commons.entities.UserModel;
+import com.example.users_service_api.commons.entities.UserModel;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

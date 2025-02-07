@@ -1,6 +1,6 @@
-package com.example.auth_service_api.service;
+package com.example.users_service_api.service;
 
-import com.example.auth_service_api.commons.dtos.TokenResponse;
+import com.example.users_service_api.commons.dtos.TokenResponse;
 import io.jsonwebtoken.Claims;
 
 public interface JwtService {

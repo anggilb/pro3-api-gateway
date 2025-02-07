@@ -1,4 +1,4 @@
-package com.example.auth_service_api.commons.dtos;
+package com.example.users_service_api.commons.dtos;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotNull;

@@ -7,9 +7,26 @@
     <list default="true" id="2be4a204-6be0-44bf-8ed0-de0b97e3c389" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/example/api_gateway/services/AuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/example/api_gateway/services/AuthenticationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/example/api_gateway/services/JwtUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/com/example/api_gateway/services/JwtUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service-api/src/main/java/com/example/auth_service_api/service/impl/JwtServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service-api/src/main/java/com/example/auth_service_api/service/impl/JwtServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service-api/src/main/java/com/example/auth_service_api/AuthServiceApiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service-api/src/main/java/com/example/auth_service_api/AuthServiceApiApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service-api/src/main/java/com/example/auth_service_api/commons/dtos/TokenResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/users-service-api/src/main/java/com/example/users_service_api/commons/dtos/TokenResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service-api/src/main/java/com/example/auth_service_api/commons/dtos/UserRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/users-service-api/src/main/java/com/example/users_service_api/commons/dtos/UserRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service-api/src/main/java/com/example/auth_service_api/commons/entities/UserModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/users-service-api/src/main/java/com/example/users_service_api/commons/entities/UserModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service-api/src/main/java/com/example/auth_service_api/config/JwtAuthFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service-api/src/main/java/com/example/auth_service_api/config/JwtAuthFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service-api/src/main/java/com/example/auth_service_api/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service-api/src/main/java/com/example/auth_service_api/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service-api/src/main/java/com/example/auth_service_api/controller/AuthApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service-api/src/main/java/com/example/auth_service_api/controller/AuthApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service-api/src/main/java/com/example/auth_service_api/controller/impl/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service-api/src/main/java/com/example/auth_service_api/controller/impl/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service-api/src/main/java/com/example/auth_service_api/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/users-service-api/src/main/java/com/example/users_service_api/repositories/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service-api/src/main/java/com/example/auth_service_api/service/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service-api/src/main/java/com/example/auth_service_api/service/AuthService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service-api/src/main/java/com/example/auth_service_api/service/JwtService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service-api/src/main/java/com/example/auth_service_api/service/impl/AuthServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service-api/src/main/java/com/example/auth_service_api/service/impl/AuthServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service-api/src/main/java/com/example/auth_service_api/service/impl/JwtServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/users-service-api/src/main/java/com/example/users_service_api/service/impl/JwtServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service-api/src/main/java/com/example/auth_service_api/service/impl/UserDetailsImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/users-service-api/src/main/java/com/example/users_service_api/service/impl/UserDetailsImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-service-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/users-service-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-service-api/src/main/java/com/example/users_service_api/UsersServiceApiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/users-service-api/src/main/java/com/example/users_service_api/UsersServiceApiApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-service-api/src/main/java/com/example/users_service_api/controller/UserApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/users-service-api/src/main/java/com/example/users_service_api/controller/UserApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-service-api/src/main/java/com/example/users_service_api/controller/impl/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/users-service-api/src/main/java/com/example/users_service_api/controller/impl/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users-service-api/src/main/java/com/example/users_service_api/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/users-service-api/src/main/java/com/example/users_service_api/service/impl/UserServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +37,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="AnnotationType" />
       </list>
     </option>
   </component>
@@ -54,6 +72,9 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.example.auth_service_api.config" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.example.games_service_api.commons.constants" />
       <recent name="com.example.common_library.commons.dtos" />

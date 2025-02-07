@@ -2,11 +2,11 @@ package com.example.auth_service_api.service.impl;
 
 import com.example.auth_service_api.service.AuthService;
 import com.example.auth_service_api.commons.dtos.LoginRequest;
-import com.example.auth_service_api.commons.dtos.TokenResponse;
-import com.example.auth_service_api.commons.dtos.UserRequest;
-import com.example.auth_service_api.commons.entities.UserModel;
-import com.example.auth_service_api.repositories.UserRepository;
-import com.example.auth_service_api.service.JwtService;
+import com.example.users_service_api.commons.dtos.TokenResponse;
+import com.example.users_service_api.commons.dtos.UserRequest;
+import com.example.users_service_api.commons.entities.UserModel;
+import com.example.users_service_api.repositories.UserRepository;
+import com.example.users_service_api.service.JwtService;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
