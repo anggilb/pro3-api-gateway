@@ -10,17 +10,17 @@ import org.springframework.web.bind.annotation.*;
 public interface UserApi {
     @GetMapping(value = "/get")
     ResponseEntity<UserDetails> getUser(
-            @RequestAttribute("userIdRequest") Long userId
+            @RequestHeader("X-User-Id") Long userId
     );
 
     @PutMapping(value = "/put")
     ResponseEntity<Void> putUser(
-            @RequestAttribute("userIdRequest") Long userId,
+            @RequestHeader("X-User-Id") Long userId,
             @RequestBody UserRequest userRequest
     );
 
     @DeleteMapping(value = "/delete")
     ResponseEntity<Void> deleteUser(
-            @RequestAttribute("userIdRequest") Long userId
+            @RequestHeader("X-User-Id") Long userId
     );
 }

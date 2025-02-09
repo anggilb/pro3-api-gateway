@@ -1,9 +1,9 @@
 package com.example.games_service_api.controller.impl;
 
-import com.example.games_service_api.commons.entities.GameModel;
+import com.example.games_service_api.commons.dtos.GameRequest;
+import com.example.games_service_api.commons.dtos.GameResponse;
 import com.example.games_service_api.controller.GameApi;
 import com.example.games_service_api.service.GameService;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -16,43 +16,24 @@ public class GameController implements GameApi {
     }
 
     @Override
-    public ResponseEntity<GameModel> createGame(Long userId, GameModel gameRequest) {
-        gameRequest.setUserId(userId);
-        return ResponseEntity.ok(gameService.createGame(gameRequest));
+    public ResponseEntity<GameResponse> createGame(Long userId, GameRequest gameRequest) {
+        return ResponseEntity.ok(gameService.createGame(userId, gameRequest));
     }
 
     @Override
-    public ResponseEntity<GameModel> getGame(Long userId, Long gameId) {
-        GameModel game = gameService.getGame(gameId);
-
-        if (game.getUserId() != userId) {
-            return ResponseEntity.status(HttpStatus.FORBIDDEN).build();
-        }
-
-        return ResponseEntity.ok(game);
+    public ResponseEntity<GameResponse> getGame(Long userId, Long gameId) {
+        return ResponseEntity.ok(gameService.getGame(userId, gameId));
     }
 
     @Override
-    public ResponseEntity<Void> putGame(Long userId, Long gameId, GameModel gameRequest) {
-        GameModel game = gameService.getGame(gameId);
-
-        if (game.getUserId() != userId) {
-            return ResponseEntity.status(HttpStatus.FORBIDDEN).build();
-        }
-
-        gameService.putGame(gameId, gameRequest);
+    public ResponseEntity<Void> putGame(Long userId, Long gameId, GameRequest gameRequest) {
+        gameService.putGame(userId, gameId, gameRequest);
         return ResponseEntity.noContent().build();
     }
 
     @Override
     public ResponseEntity<Void> deleteGame(Long userId, Long gameId) {
-        GameModel game = gameService.getGame(gameId);
-
-        if (game.getUserId() != userId) {
-            return ResponseEntity.status(HttpStatus.FORBIDDEN).build();
-        }
-
-        gameService.deleteGame(gameId);
+        gameService.deleteGame(userId, gameId);
         return ResponseEntity.noContent().build();
     }
 }

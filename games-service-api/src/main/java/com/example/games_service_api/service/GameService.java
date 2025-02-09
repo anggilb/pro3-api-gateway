@@ -1,10 +1,11 @@
 package com.example.games_service_api.service;
 
-import com.example.games_service_api.commons.entities.GameModel;
+import com.example.games_service_api.commons.dtos.GameRequest;
+import com.example.games_service_api.commons.dtos.GameResponse;
 
 public interface GameService {
-    GameModel createGame(GameModel gameRequest);
-    GameModel getGame(Long gameId);
-    void putGame(Long gameId, GameModel gameRequest);
-    void deleteGame(Long gameId);
+    GameResponse createGame(Long userId, GameRequest gameRequest);
+    GameResponse getGame(Long userId, Long gameId);
+    void putGame(Long userId, Long gameId, GameRequest gameRequest);
+    void deleteGame(Long userId, Long gameId);
 }

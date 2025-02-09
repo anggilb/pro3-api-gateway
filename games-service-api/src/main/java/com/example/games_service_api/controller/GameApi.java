@@ -1,34 +1,35 @@
 package com.example.games_service_api.controller;
 
 import com.example.games_service_api.commons.constants.ApiPathConstants;
-import com.example.games_service_api.commons.entities.GameModel;
+import com.example.games_service_api.commons.dtos.GameResponse;
+import com.example.games_service_api.commons.dtos.GameRequest;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RequestMapping(ApiPathConstants.V1_ROUTE + ApiPathConstants.GAME_ROUTE)
 public interface GameApi {
     @PostMapping(value = "/create")
-    ResponseEntity<GameModel> createGame(
-            @RequestAttribute("userIdRequest") Long userId,
-            @RequestBody GameModel gameRequest
+    ResponseEntity<GameResponse> createGame(
+            @RequestHeader("X-User-Id") Long userId,
+            @RequestBody GameRequest gameRequest
     );
 
     @GetMapping(value = "/{gameId}")
-    ResponseEntity<GameModel> getGame(
-            @RequestAttribute("userIdRequest") Long userId,
+    ResponseEntity<GameResponse> getGame(
+            @RequestHeader("X-User-Id") Long userId,
             @PathVariable Long gameId
     );
 
     @PutMapping(value = "/{gameId}")
     ResponseEntity<Void> putGame(
-            @RequestAttribute("userIdRequest") Long userId,
+            @RequestHeader("X-User-Id") Long userId,
             @PathVariable Long gameId,
-            @RequestBody GameModel gameRequest
+            @RequestBody GameRequest gameRequest
     );
 
     @DeleteMapping(value = "/{gameId}")
     ResponseEntity<Void> deleteGame(
-            @RequestAttribute("userIdRequest") Long userId,
+            @RequestHeader("X-User-Id") Long userId,
             @PathVariable Long gameId
     );
 }

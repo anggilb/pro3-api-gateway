@@ -14,7 +14,7 @@ import lombok.*;
 public class GameModel {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long gameId;
+    private Long gameId;
     private String name;
-    private long userId;
+    private Long userId;
 }

@@ -22,8 +22,6 @@ public class JwtAuthFilter extends OncePerRequestFilter {
             return;
         }
 
-        request.setAttribute("userIdRequest", userIdHeader);
-
         filterChain.doFilter(request, response);
     }
 
